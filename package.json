@@ -10,5 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "keywords": [
+    "time",
+    "estimate",
+    "parse"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianheyn/time-string"
   }
 }
