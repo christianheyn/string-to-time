@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 1`] = `
+Object {
+  "d": 2,
+  "h": 4,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 2`] = `
+Object {
+  "d": 0,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": 30,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 3`] = `
+Object {
+  "d": 0,
+  "h": 1,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 4`] = `
+Object {
+  "d": 1,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 5`] = `
+Object {
+  "d": 3,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 6`] = `
+Object {
+  "d": -3,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 7`] = `
+Object {
+  "d": 0,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": -30,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 8`] = `
+Object {
+  "d": 2,
+  "h": 5,
+  "hoursPerDay": 8,
+  "m": 0,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 9`] = `
+Object {
+  "d": 1,
+  "h": 0,
+  "hoursPerDay": 8,
+  "m": 20,
+}
+`;
+
+exports[`minutesToEstimate(minutes, hoursPerDay = 8) returns object 10`] = `
+Object {
+  "d": 104,
+  "h": 1,
+  "hoursPerDay": 8,
+  "m": 20,
+}
+`;
