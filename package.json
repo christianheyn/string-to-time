@@ -1,5 +1,5 @@
 {
-  "name": "time-string",
+  "name": "string-to-time",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +18,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianheyn/time-string"
+    "url": "https://github.com/christianheyn/string-to-time"
   }
 }
