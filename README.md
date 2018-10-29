@@ -1,4 +1,5 @@
 # string-to-time
+[![Build Status](https://travis-ci.org/christianheyn/string-to-time.svg?branch=master)](https://travis-ci.org/christianheyn/string-to-time)
 
 Get time information from strings
 
