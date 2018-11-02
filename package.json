@@ -1,10 +1,11 @@
 {
   "name": "string-to-time",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch:test": "jest --watch"
   },
   "author": "",
   "license": "ISC",

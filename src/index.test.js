@@ -1,6 +1,6 @@
 const { stringToTime } = require('../index');
 
-describe('stringToTime', () => {
+describe('stringToTime(str)', () => {
     it('is a function', () => {
         const actual = typeof stringToTime;
         const expected = 'function';
