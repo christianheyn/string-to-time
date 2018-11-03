@@ -14,7 +14,8 @@ const tokenize = (str) => {
 
     const clean = splitSecondStep.filter(v => v !== '');
 
-    return clean.map(content => ({
+    return clean.map((content, i) => ({
+        id: i,
         content,
         type: (content.match(REGEX)) ? 'time' : '?',
     }));
