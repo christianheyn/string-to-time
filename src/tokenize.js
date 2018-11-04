@@ -14,11 +14,37 @@ const tokenize = (str) => {
 
     const clean = splitSecondStep.filter(v => v !== '');
 
-    return clean.map((content, i) => ({
-        id: i,
-        content,
-        type: (content.match(REGEX)) ? 'time' : '?',
-    }));
+    return clean.map((content, i) => {
+        const cMatch = reg => content.match(reg);
+        const matchRegex = cMatch(REGEX);
+        const basic = {
+            id: i,
+            content,
+            type: matchRegex ? 'time' : '?',
+        };
+
+        const isX = Boolean(cMatch(/x/));
+        const isM = Boolean(cMatch(/m/));
+        const isH = Boolean(cMatch(/h/));
+        const isD = Boolean(cMatch(/d/));
+
+        const additional = !matchRegex
+            ? {}
+            : {
+                subtypes: {
+                    x: isX,
+                    m: isM,
+                    h: isH,
+                    d: isD,
+                }
+            };
+
+        return {
+            ...basic,
+            ...additional,
+        };
+
+    });
 };
 
 module.exports = {

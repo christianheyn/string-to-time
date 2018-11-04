@@ -174,6 +174,37 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         }
     });
 
+    it('also calculates negative multiplications', () => {
+        {
+            const actual = translateEstimateString('-2 x 2m').minutes;
+            const expected = -4;
+            expect(actual).toEqual(expected);
+        }
+        {
+            const actual = translateEstimateString('-2 x -2m').minutes;
+            const expected = 4;
+            expect(actual).toEqual(expected);
+        }
+    });
+
+    it('also calculates negative floating multiplications', () => {
+        {
+            const actual = translateEstimateString('-2.0 x 2m').minutes;
+            const expected = -4;
+            expect(actual).toEqual(expected);
+        }
+        {
+            const actual = translateEstimateString('-2.0 x -2m').minutes;
+            const expected = 4;
+            expect(actual).toEqual(expected);
+        }
+        {
+            const actual = translateEstimateString('-0.5 x -2m').minutes;
+            const expected = 1;
+            expect(actual).toEqual(expected);
+        }
+    });
+
     it('also calculates floating numbers', () => {
         {
             const actual = translateEstimateString('2.5d').minutes;
