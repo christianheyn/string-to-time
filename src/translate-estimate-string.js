@@ -33,11 +33,11 @@ const translateEstimateString = (str, hoursPerDay = 8) => {
         const preparedValue = curr.replace(/,/g, '.');
         const asNumber = resolveMuliplication(preparedValue);
 
-        if (isUnit('m')) {
+        if (isUnit('m') || isUnit('M')) {
             return asNumber + acc;
         }
 
-        if (isUnit('h')) {
+        if (isUnit('h') || isUnit('H')) {
             return (asNumber * 60) + acc;
         }
 

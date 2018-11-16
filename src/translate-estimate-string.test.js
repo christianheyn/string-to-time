@@ -37,8 +37,20 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         expect(actual).toEqual(expected);
     });
 
+    it('works not with unit "M" as unit', () => {
+        const actual = translateEstimateString('30 M').minutes;
+        const expected = 0;
+        expect(actual).toEqual(expected);
+    });
+
     it('works with unit "minute"', () => {
         const actual = translateEstimateString('1minute').minutes;
+        const expected = 1;
+        expect(actual).toEqual(expected);
+    });
+
+    it('works with unit "Minute"', () => {
+        const actual = translateEstimateString('1Minute').minutes;
         const expected = 1;
         expect(actual).toEqual(expected);
     });
@@ -55,6 +67,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         expect(actual).toEqual(expected);
     });
 
+    it('works with unit "Minutes"', () => {
+        const actual = translateEstimateString('9Minutes').minutes;
+        const expected = 9;
+        expect(actual).toEqual(expected);
+    });
+
     it('works with unit "minutes" and singe space betwwen number and unit', () => {
         const actual = translateEstimateString('30 minutes').minutes;
         const expected = 30;
@@ -67,6 +85,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         expect(actual).toEqual(expected);
     });
 
+    it('works not width unit "H" as unit', () => {
+        const actual = translateEstimateString('30 H').minutes;
+        const expected = 0;
+        expect(actual).toEqual(expected);
+    });
+
     it('works with unit "h" and singe space betwwen number and unit', () => {
         const actual = translateEstimateString('1 h').minutes;
         const expected = 60;
@@ -75,6 +99,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
 
     it('works with unit "hour"', () => {
         const actual = translateEstimateString('2hour').minutes;
+        const expected = 120;
+        expect(actual).toEqual(expected);
+    });
+
+    it('works with unit "Hour"', () => {
+        const actual = translateEstimateString('2Hour').minutes;
         const expected = 120;
         expect(actual).toEqual(expected);
     });
@@ -103,6 +133,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         expect(actual).toEqual(expected);
     });
 
+    it('works not width unit "D" as unit', () => {
+        const actual = translateEstimateString('3D').minutes;
+        const expected = 0;
+        expect(actual).toEqual(expected);
+    });
+
     it('works with unit "d" and singe space betwwen number and unit', () => {
         const actual = translateEstimateString('1 d').minutes;
         const expected = 480;
@@ -115,6 +151,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
         expect(actual).toEqual(expected);
     });
 
+    it('works with unit "Day"', () => {
+        const actual = translateEstimateString('4Day').minutes;
+        const expected = 1920;
+        expect(actual).toEqual(expected);
+    });
+
     it('works with unit "day" and singe space betwwen number and unit', () => {
         const actual = translateEstimateString('1 day').minutes;
         const expected = 480;
@@ -123,6 +165,12 @@ describe('translateEstimateString(str, hoursPerDay = 8)', () => {
 
     it('works with unit "days"', () => {
         const actual = translateEstimateString('4days').minutes;
+        const expected = 1920;
+        expect(actual).toEqual(expected);
+    });
+
+    it('works with unit "Days"', () => {
+        const actual = translateEstimateString('4Days').minutes;
         const expected = 1920;
         expect(actual).toEqual(expected);
     });
