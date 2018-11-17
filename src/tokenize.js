@@ -1,7 +1,8 @@
 const { REGEX } = require('./const');
 
-const startSeparator = '|||%--';
-const endSeparator = '--%|||';
+const now = Date.now();
+const startSeparator = `${now}%--`;
+const endSeparator = `--%${now}`;
 
 const tokenize = (str) => {
     const wrapped = str.replace(REGEX, match => `${startSeparator}${match}${endSeparator}`);
